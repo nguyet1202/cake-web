@@ -103,7 +103,7 @@
                 <li class="payment_method_vnpay">
                   <input id="payment_method_vnpay" type="radio" class="input-radio" name="payment_method" value="vnpay"
                     data-order_button_text="Proceed to VnPay">
-                  <label for="payment_method_vnpay">VnPay</label>
+                  <label for="payment_method_vnpay" >VnPay</label>
                   <div class="payment_box payment_method_vnpay" style="display: none;">
                     Pay via VnPay; you can pay with your credit card if you don’t have a VnPay account
                   </div>
@@ -112,7 +112,7 @@
             </div>
 
             <div class="text-center">
-              <button type="submit" class="beta-btn primary">Đặt hàng <i class="fa fa-chevron-right"></i></button>
+              <button type="submit" class="beta-btn primary" name="redirect">Đặt hàng <i class="fa fa-chevron-right"></i></button>
             </div>
           </div> <!-- .your-order -->
         </div>
