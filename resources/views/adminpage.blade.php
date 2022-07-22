@@ -1,10 +1,6 @@
-<?php
-if(session_id() === '')
-session_start();
-?>
 <!doctype html>
 <html lang="en">
- 
+
 <head>
   <title>Totoro milk tea</title>
   <!-- Required meta tags -->
@@ -18,11 +14,15 @@ session_start();
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
 </head>
- 
+
 <body class="container">
+  <p><a href="/">Go to home page</a></p>
   <h1 class="text-center">Admin Page</h1>
+  <!-- <p><a href="/">Go to home page</a></p>
+      <p><a href="/admin/user">Users</a></p>
+      <p><a href="/admin/product">Products</a></p> -->
   <div class="container">
-    <form  method="post" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
       @csrf
       <div class="card-text row">
         <h4 class="text-left col"><b>Quản lý phòng</b></h4>
@@ -30,9 +30,9 @@ session_start();
           <button class="btn" type="submit" style="background-color:  #ff631c !important; color:white">Thêm mới phòng <i class="fas fa-calendar-check"></i></button>
         </div>
       </div>
- 
+
       <hr style="border:2px solid #ff631c;" />
- 
+
       <div class="form-row">
         <div class="form-group col">
           <label for="roomName">Tên phòng</label>
@@ -46,7 +46,7 @@ session_start();
           <label for="roomPrice">Giá</label>
           <input type="number" name="roomPrice" class="form-control" placeholder="Giá phòng...">
         </div>
- 
+
         <div class="form-group text-center">
           <input type="file" name="roomImage" id="roomImage" style="display: none;">
           <button type="button" class="btn btn-outline-warning" onclick="chooseFile()" style="border:1px solid #ff631c; color:#ff631c;padding: 21px">
@@ -62,21 +62,8 @@ session_start();
     </form>
   </div>
   <div>
-    <?php
-    if(isset($_SESSION['rooms']))
-    $arr = $_SESSION['rooms'];
-    ?>
-    @foreach($arr as $key => $value)
-        
-            <p>Name: {{$value['name']}}</p>
-            <p>Description: {{$value['description']}}</p>
-            <p>Price: {{$value['price']}}</p>
-            <p>Image: <img src="{{$value['image']}}"></p>
-        @endforeach
-    </div>
-  <div>
-    @include('error')
+    @include ('error')
   </div>
 </body>
- 
+
 </html>

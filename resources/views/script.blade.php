@@ -1,3 +1,4 @@
+<!-- include js files -->
 <script src="source/assets/dest/js/jquery.js"></script>
 	<script src="source/assets/dest/vendors/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -22,4 +23,3 @@
 			}}
 		)
 	})
-	</script>
