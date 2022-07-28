@@ -17,6 +17,15 @@
     <link rel="stylesheet" title="style" href="source/assets/dest/css/style.css">
     <link rel="stylesheet" href="source/assets/dest/css/animate.css">
     <link rel="stylesheet" title="style" href="source/assets/dest/css/huong-style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-84GZ46J0H1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-84GZ46J0H1');
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -42,7 +51,6 @@
   <body>
 
     @include('header')
-
     @yield('content')
     @include('footer')
     @include('script')

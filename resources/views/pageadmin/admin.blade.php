@@ -3,14 +3,17 @@
 <div class="space50">&nbsp;</div>
 <div class="container beta-relative">
   <div class="container">
-    <div class="col-12 col-md-6" style="background: red;color:white">Số sản phẩm: {{count($products)}}</div>
-    <div class="col-12 col-md-6" style="background: blue;color:white">Đã bán: <br />
+    <div class="col-12 col-md-6" style="background: black;color:white">Số sản phẩm: {{count($products)}}</div>
+    <br>
+    <div class="col-12 col-md-6" style="background: green;color:white">Đã bán: <br />
       <p>Tổng: {{$sumSold}}</p>
       <p>Hôm nay: 1</p>
       <p>Tháng này: 3</p>
       <p>Năm nay: 4</p>
     </div>
   </div>
+  <br>
+  <br>
   <div class="pull-left">
     <h2>List</h2>
   </div>
@@ -53,7 +56,6 @@
             <button name="edit" type="submit" class="btn btn-danger" style="width:80px;">Delete</button>
           </form>
         </td>
-
       </tr>
       @endforeach
     </tbody>
