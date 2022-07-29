@@ -2,7 +2,6 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
-   
 
     RewriteEngine On
 
@@ -21,7 +20,7 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 <IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{REQUEST_URI} !^public
-RewriteRule ^(.*)$ public/$1 [L]
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
