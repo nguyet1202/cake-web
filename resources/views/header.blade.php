@@ -139,6 +139,7 @@
     <nav class="main-menu">
       <ul class="l-inline ov">
         <li><a href="/trangchu">Trang chủ</a></li>
+        <li><a href="/admin">ADMIN</a>
         <li><a href="/type/1"> Loại sản phẩm</a>
           <ul class="sub-menu">
             @foreach($loai_sp as $loai)

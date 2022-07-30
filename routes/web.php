@@ -6,6 +6,8 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\productControlloer;
+
 
 Route::get('/', function () {
     return redirect('/trangchu');
@@ -32,7 +34,7 @@ Route::get('/admin-edit-form/{id}', [PageController::class, 'getAdminEdit']);
 Route::post('/admin-edit', [PageController::class, 'postAdminEdit']);
 Route::post('/admin-delete/{id}', [PageController::class, 'postAdminDelete']);
 
-Route::get('/admin-export', [PageController::class, 'exportAdminProduct'])->name('export');
+// Route::get('/admin-export', [PageController::class, 'exportAdminProduct'])->name('export');
 
 Route::get('/return-vnpay', function () {
     return view('vnpay.return-vnpay');
@@ -66,3 +68,5 @@ Route::get('/register', function () {
 
 Route::post('/register', [UserController::class, 'Register']);
 
+Route::get('/get-all-product',[productControlloer::class,'getAllProducts'])->name('import');
+Route::get('/download-pdf',[productControlloer::class,'downloadPDF'])->name('export');
